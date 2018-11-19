@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
     if params[:username]&.length > 0 \
       && params[:password]&.length > 0 \
       && User.new(username: params[:username], password: params[:password]).save
-      
+
       redirect '/login'
     else
       redirect '/failure'
