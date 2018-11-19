@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
 
   post "/signup" do
     binding.pry
-    if params[:username]
+    if params[:username]&.length > 0
 
     else
       redirect '/failure'
