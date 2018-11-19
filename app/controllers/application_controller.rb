@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/signup" do
-    if params[:username]&.length > 0
+    if params[:username]&.length > 0 && params[:password]&.length > 0
 
     else
       redirect '/failure'
