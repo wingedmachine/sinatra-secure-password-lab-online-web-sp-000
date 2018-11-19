@@ -13,12 +13,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/signup" do
-    binding.pry
-    if params[:username]
-      erb :signup
-    else
-      redirect '/failure'
-    end
+    erb :signup
   end
 
   post "/signup" do
