@@ -36,7 +36,7 @@ class ApplicationController < Sinatra::Base
 
   post "/login" do
     if params[:username]&.length > 0 && params[:password]&.length > 0
-      redirect '/login'
+      redirect '/account'
     else
       redirect '/failure'
     end
